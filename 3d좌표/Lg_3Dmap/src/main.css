@@ -1,0 +1,265 @@
+@charset "utf-8";
+
+/* 바다 수정사항
+Cmonitor,Lmonitor font size = 10 -> 0로 수정
+뷰에서 제거
+*/
+
+/* CSS Document */
+* {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    font-family: '맑은 고딕';
+    color: #333333;
+}
+
+html,
+body {
+    min-width: auto;
+    font-size: 20px;
+}
+body{
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+}
+
+header {
+    width: 100%;
+    height: 10vh;
+    /* background-color: rgba(0, 255, 255, 0.192); */
+
+    /* border: 1px solid #000000; */
+}
+
+.wrap {
+    width: 100%;
+    height: 5vh;
+    border: 1px;
+    /* border: 1px solid #000000; */
+    /* background-color: rgba(0, 255, 68, 0.259); */
+}
+/* wrap 상속 menu */
+.menu {
+    float: left;
+    width: 15%;
+    height: 100%;
+    /* border: 1px solid #000000; */
+}
+
+.menu_btn {
+    position: absolute;
+    text-align: center;
+}
+.menu_link {
+    display: inline-block;
+    padding: 50%;
+    vertical-align: top;
+}
+.menu_btn img {
+    width: 5vw;
+    height: 5vw;
+}
+
+/* modal menu 연동 */
+#modal{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background: rgb(0, 0, 0,0.8);
+    z-index: 1;
+    display: none;
+}
+#modal.active{
+    display: block;
+}
+.modal_up{
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    background-color: #ffffff;
+}
+.uptitle{
+    margin-top: 30px;
+    text-align: center;
+    line-height: 16px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.upbody{
+    padding: 30px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+	font-weight: bold;
+}
+.upbody > li{
+	margin: 8px;
+}
+.modal_btn{
+    width: 20px;
+    height: 20px;
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #cccccc42;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+/* wrap 상속 logo */
+.logo {
+    text-align: center;
+    float: left;
+    width: 70%;
+    height: 100%;
+}
+
+.logoText {
+    line-height: 5vh;
+    /* 텍스트 상하 중아 정렬 */
+    font-size: 1em;
+    color: #2010d7b6;
+    font-weight: bold;
+}
+/* wrap 상속 user */
+.user {
+    float: right;
+    width: 13%;
+    height: 100%;
+    /* border: 1px solid #000000; */
+    text-align: center;
+    display:flex;
+    justify-content:center;    
+    margin-top: 1%;
+}
+.user_link {
+    display: inline-block;
+    margin: auto;
+    background-color: rgba(38, 128, 255, 0.243);
+    border-radius: 20px;
+    text-align: center;
+    width: 10vw;
+    height: 10vw;
+}
+.user_link img {
+    padding: 1.5vw;    
+    width: 7vw;
+    height: 7vw;
+    
+    /* border: 1px solid #000000; */
+}
+
+/* 검색창 */
+.searchbar {
+    float: right;
+    width: 100%;
+    height: 40%;
+}
+select {
+    width: 95%;
+    height: 100%;
+    border:2px solid #dbdbdb;
+    margin-top: 2.5%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    border-radius:5px;
+    font-size: 1em;
+    
+    color: #979797;
+}
+
+select:focus {
+    -webkit-box-shadow: 0 0 3px 1px #7cdaff;
+    -moz-box-shadow: 0 0 3px 1px #7cdaff;
+    box-shadow: 0 0 3px 1px #7cdaff;
+}
+
+option{
+   color: #8e8d8d;
+}
+
+
+#three-canvas {
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    /* pointer-events: none; */
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: #528ed33b;
+    /* border: 1px solid #000000; */
+}
+
+/* 버튼 */
+.button {
+	position: fixed;
+	width: 5%;
+	height: 17px;
+	border: 1px solid white;
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.226);
+	padding: 10px;
+	text-align: center;
+	color: white;
+	font-size: 10pt;
+}
+
+#plusBtn {
+	right: 5px;
+	bottom: 85px;
+}
+
+#minusBtn {
+	right: 5px;
+	bottom: 125px;
+}
+
+#centerBtn {
+	right: 5px;
+	bottom: 165px;
+}
+
+#angleBtn {
+	right: 5px;
+	bottom: 205px;
+}
+
+#Lmonitor {
+	position: fixed;
+	top:100px;
+	right: 0;
+	color: black;
+	padding: 5px;
+	text-align: right;
+	font-size: 0pt;
+}
+
+#Cmonitor {
+	position: fixed;
+	top: 85px;
+	right: 0;
+	color: black;
+	padding: 5px;
+	text-align: right;
+	font-size: 0pt;
+}
